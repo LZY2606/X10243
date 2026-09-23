@@ -1,0 +1,7 @@
+# ITC rule set: dilution heat correspondence (time-based fallback)
+rule_set: blank_correction
+rule_set_version: 1.1
+correspondence: injection_index_time_within_20s
+require_volume_match: true
+on_missing: flag_uncorrected
+change_note: allow a blank injection within 20 s to stand in

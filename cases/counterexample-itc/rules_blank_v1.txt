@@ -1,0 +1,9 @@
+# ITC rule set: dilution heat correspondence
+rule_set: blank_correction
+rule_set_version: 1.0
+# Match blank to sample by ordinal injection index and volume; if there is
+# no corresponding blank injection the sample heat is flagged and left
+# uncorrected (strict mode rejects the run).
+correspondence: injection_index
+require_volume_match: true
+on_missing: flag_uncorrected

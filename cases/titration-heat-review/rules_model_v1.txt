@@ -1,0 +1,9 @@
+# ITC rule set: binding model review
+rule_set: model
+rule_set_version: 1.0
+candidates: one_site,two_site,dilution
+# Equi-optimal when relative SSE is within tie_rel_tol or AIC within
+# tie_aic; all legal candidates are retained in stable order.
+tie_rel_tol: 0.05
+tie_aic: 2.0
+max_evaluations: 6000

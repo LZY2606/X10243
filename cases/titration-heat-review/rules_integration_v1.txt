@@ -1,0 +1,12 @@
+# ITC rule set: integration windows
+rule_set: integration
+rule_set_version: 1.0
+pre_injection_seconds: 10
+# Window ends when the tail returns within return_tolerance_uW of the
+# baseline for at least settle_seconds; a later injection truncates it.
+return_tolerance_uW: 0.15
+settle_seconds: 6
+max_window_seconds: 150
+# A single NA sample is interpolated; absent coordinates (a gap) make the
+# window unintegrable. Windows never span a data gap.
+discard_first_injection: false

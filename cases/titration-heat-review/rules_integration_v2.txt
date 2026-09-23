@@ -1,0 +1,9 @@
+# ITC rule set: integration windows (first injection now discarded)
+rule_set: integration
+rule_set_version: 1.1
+pre_injection_seconds: 10
+return_tolerance_uW: 0.15
+settle_seconds: 6
+max_window_seconds: 150
+discard_first_injection: true
+change_note: first shot of the CE-01 syringe is known to be short; discard it
