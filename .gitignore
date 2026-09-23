@@ -34,3 +34,7 @@ coverage/
 .vite/
 .turbo/
 *.tsbuildinfo
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
