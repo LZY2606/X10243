@@ -1,0 +1,4 @@
+field,value,note
+temperature,25.0 °C,isothermal block temperature
+cell_volume,1.423 mL,active cell volume
+reference_power,10 µcal/s,reference power setting

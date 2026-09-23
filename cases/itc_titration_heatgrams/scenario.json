@@ -1,0 +1,42 @@
+{
+  "boundary_features": {
+    "blank_missing_main_injection": 11,
+    "first_injection_discarded_by_decision": 1,
+    "gap_injection": 9,
+    "gap_sample_rows": [
+      927,
+      928,
+      929,
+      930,
+      931
+    ],
+    "overlap_spacing_s": 90.0,
+    "overlapping_injections": [
+      7,
+      8
+    ],
+    "unparseable_sample_row": 1044
+  },
+  "case_id": "itc_titration_heatgrams",
+  "files": [
+    "cell_power.csv",
+    "injections.csv",
+    "concentrations_v1.csv",
+    "conditions.csv",
+    "baseline_v1.csv",
+    "blank_power.csv",
+    "blank_injections.csv"
+  ],
+  "narrative": "biophysics lab imports raw power curves, injection timing and a blank control; reviews per-injection integrals and binding-model candidates.",
+  "time_basis": "experiment_clock(s)",
+  "title": "滴定热谱：ITC 注射积分、稀释热与绑定模型审议",
+  "true_parameters": {
+    "cell_concentration_M": 0.0001,
+    "cell_volume_ul": 1423.0,
+    "dH_ucal_per_mol": -10000000.0,
+    "log10_K": 5.8,
+    "n": 1.0,
+    "syringe_concentration_M": 0.01,
+    "temperature_K": 298.15
+  }
+}
