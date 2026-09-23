@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>ITC 注射积分与绑定模型审阅</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1 id="case-title">ITC 审阅</h1>
+  <div class="header-actions">
+    <span id="view-pos" class="view-pos"></span>
+    <button id="btn-head">回到主叙事</button>
+    <button id="btn-latest">最新状态</button>
+    <button id="btn-export">导出</button>
+    <label class="import-label">导入<input type="file" id="file-import" accept=".json"></label>
+  </div>
+</header>
+<details id="narrative-box" open>
+  <summary>案例叙事</summary>
+  <ol id="narrative"></ol>
+</details>
+<main>
+  <section class="col-left">
+    <div class="panel">
+      <h2>功率曲线 / 注射区间 / 积分窗 <span class="units" id="power-units"></span></h2>
+      <div id="power-svg"></div>
+      <div id="integrals-meta" class="meta-line"></div>
+    </div>
+    <div class="panel">
+      <h2>每次注射积分</h2>
+      <table id="integrals-table">
+        <thead><tr><th>注射</th><th>t (s)</th><th>体积 (µL)</th><th>窗口 (s)</th>
+        <th>热 (µJ)</th><th>标记</th><th>状态</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="panel">
+      <h2>材料版本(分开版本化)</h2>
+      <table id="materials-table">
+        <thead><tr><th>种类</th><th>版本</th><th>身份</th><th>当前</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+  <section class="col-right">
+    <div class="panel">
+      <h2>绑定模型候选 <span id="fit-stale" class="stale"></span></h2>
+      <div id="model-tabs" class="tabs"></div>
+      <div id="candidate-box"></div>
+      <div id="residuals-svg"></div>
+      <table id="points-table">
+        <thead><tr><th>注射</th><th>摩尔热 (kJ/mol)</th><th>热 (µJ)</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="panel">
+      <h2>诊断</h2>
+      <ul id="diagnostics"></ul>
+    </div>
+    <div class="panel">
+      <h2>审阅决定</h2>
+      <div id="decision-form">
+        <input id="dec-reviewer" placeholder="审阅者">
+        <select id="dec-action">
+          <option value="accept">接受</option>
+          <option value="reject">否定</option>
+          <option value="adjust">参数调整</option>
+          <option value="discard_injection">舍弃注射</option>
+        </select>
+        <select id="dec-target"></select>
+        <input id="dec-rationale" placeholder="理由">
+        <button id="btn-decide">记录决定</button>
+      </div>
+      <ul id="decisions"></ul>
+    </div>
+  </section>
+</main>
+<footer>
+  <h2>事件时间线(点击回到该事件时的依赖版本与可见结论)</h2>
+  <div id="timeline"></div>
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
