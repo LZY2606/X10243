@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>ITC 注射积分与绑定模型审阅</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>滴定热谱审阅 <span class="muted">ITC 注射积分 · 稀释热 · 绑定模型</span></h1>
+  <div class="toolbar">
+    <label>分支 <select id="branch"><option value="">全部</option><option>main</option><option>review-b</option></select></label>
+    <button id="btn-export">导出</button>
+    <button id="btn-import">导入</button>
+    <input type="file" id="file-import" accept=".json" hidden>
+    <button id="btn-reset">重载案例</button>
+    <span id="asof-label" class="muted"></span>
+  </div>
+</header>
+
+<section id="timeline-sec">
+  <h2>事件时间线 <span class="muted">点击任一事件回到当时的依赖版本与可见结论</span></h2>
+  <div id="timeline"></div>
+</section>
+
+<main>
+  <section class="panel wide">
+    <h2>功率曲线 <span id="curve-meta" class="muted"></span></h2>
+    <svg id="curve" viewBox="0 0 960 260" preserveAspectRatio="none"></svg>
+    <div id="curve-legend" class="legend"></div>
+  </section>
+
+  <section class="panel">
+    <h2>注射积分 <span id="integration-meta" class="muted"></span></h2>
+    <table id="injections">
+      <thead><tr>
+        <th>身份</th><th>t (s)</th><th>体积 (µL)</th><th>积分窗</th>
+        <th>原始热 (µcal)</th><th>空白 (µcal)</th><th>校正热 (µcal)</th><th>状态 / 失效原因</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2>绑定模型候选 <span id="fit-meta" class="muted"></span></h2>
+    <div id="candidates"></div>
+    <svg id="residuals" viewBox="0 0 960 180" preserveAspectRatio="none"></svg>
+  </section>
+
+  <section class="panel">
+    <h2>诊断 <span class="muted">带位置的机器可读判定</span></h2>
+    <ul id="diagnostics"></ul>
+  </section>
+
+  <section class="panel">
+    <h2>材料版本 <span class="muted">不可变材料，分开版本化</span></h2>
+    <ul id="materials"></ul>
+  </section>
+
+  <section class="panel">
+    <h2>决定 <span class="muted">可修改层，按分支保留</span></h2>
+    <ul id="decisions"></ul>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
