@@ -1,0 +1,15 @@
+{
+  "cell": {
+    "value": 0.1,
+    "unit": "mM"
+  },
+  "syringe": {
+    "value": 1.8,
+    "unit": "mM"
+  },
+  "cell_concentration_alt": {
+    "value": "0.1?",
+    "unit": "mM"
+  },
+  "note": "操作者手抄备份值，字迹不清，保留不用于计算"
+}

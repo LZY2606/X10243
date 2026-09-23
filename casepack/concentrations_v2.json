@@ -1,0 +1,11 @@
+{
+  "cell": {
+    "value": 0.1,
+    "unit": "mM"
+  },
+  "syringe": {
+    "value": 1.76,
+    "unit": "mM"
+  },
+  "revision_reason": "复称后滴定剂浓度修订为 1.76 mM"
+}
