@@ -1,0 +1,25 @@
+ITC-INJECTIONS/1
+time-unit: s
+volume-unit: uL
+time-origin: inj1@0.0s
+@injections
+1 0 2  # prime injection, reviewer may discard
+2 120 5
+3 240 5
+4 360 5
+5 480 5
+6 600 5
+7 720 5
+8 745 5
+9 865 5
+10 985 5
+11 1105 5
+12 1225 5
+13 1345 5
+14 1465 5
+15 1585 5
+16 1705 5
+17 1825 5
+18 1945 5
+19 2065 5
+20 2185 5

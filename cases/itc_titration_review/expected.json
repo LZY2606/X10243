@@ -1,0 +1,38 @@
+{
+  "case": "itc_titration_review",
+  "rule_versions": {
+    "binding": "binding-v1.0",
+    "blank_correspondence": "blank-corr-v1",
+    "integration": "integrate-v1.0"
+  },
+  "run_a": {
+    "expected_K_m3_per_mol": 2000.0,
+    "expected_dH_J_per_mol": -25000.0,
+    "expected_model": "one_site",
+    "gap_injection": 12,
+    "gap_time_s": 1280.0,
+    "injections": 20,
+    "local_correction_injection": 10,
+    "overlapping_injections": [
+      7,
+      8
+    ],
+    "prime_injection": 1
+  },
+  "run_b": {
+    "min_tie_models": [
+      "one_site",
+      "dilution"
+    ],
+    "tie_noise_fraction": 0.43687499999999996
+  },
+  "title": "滴定热谱：ITC 注射积分、稀释热与绑定模型审议",
+  "units": {
+    "concentration": "mM,uM source / mol m-3 derived",
+    "heat": "J derived",
+    "power": "uW source / W derived",
+    "temperature": "C source / K derived",
+    "time": "s relative to inj1@0.0s",
+    "volume": "uL source / m3 derived"
+  }
+}

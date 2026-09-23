@@ -1,0 +1,6 @@
+ITC-CONCENTRATION/1
+ligand_syringe: 0.5
+ligand-unit: mM
+macromolecule_cell: 20.0
+macromolecule-unit: uM
+concentration-version: v1
