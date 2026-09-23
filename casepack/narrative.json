@@ -1,0 +1,19 @@
+{
+  "id": "itc-titration-review-001",
+  "title": "滴定热谱：ITC 注射积分、稀释热与绑定模型审议",
+  "actors": ["reviewer-A", "reviewer-B"],
+  "initial_state": "功率采样、注射体积和时间、浓度、温度、池体积、基线、空白曲线分别版本化导入",
+  "steps": [
+    {"seq": 1, "kind": "compute", "what": "主链审阅：积分 → 空白扣除 → 一位点/两位点/稀释模型拟合"},
+    {"seq": 2, "kind": "decision", "what": "首注（2 µL 预充）舍弃；拟合过期重算，原积分不变"},
+    {"seq": 3, "kind": "parameter_revision", "what": "浓度修订（syringe 1.2 → 1.1 mM，重新称量）；模型过期，原积分不变"},
+    {"seq": 4, "kind": "local_source_change", "what": "温度重读（25.0 °C → 298.1 K）；仅拟合依赖过期，积分与空白扣除不受影响"},
+    {"seq": 5, "kind": "conflicting_decisions", "what": "审阅者 A 采纳一位点模型，审阅者 B 采纳两位点模型；两条决定均保留，前者被取代"},
+    {"seq": 6, "kind": "branch_b", "what": "第二分支：更长积分窗重放，保留全部等优模型候选"}
+  ],
+  "hard_rules": [
+    "注射后峰可重叠，积分窗不跨越数据缺口",
+    "稀释热扣除必须说明对应规则",
+    "浓度修订使模型过期但不改原积分"
+  ]
+}

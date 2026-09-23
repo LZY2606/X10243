@@ -1,0 +1,41 @@
+{
+  "title": "滴定热谱：ITC 注射积分、稀释热与绑定模型审议",
+  "sample": "SH2 domain / phosphopeptide (synthetic)",
+  "concentrations": {
+    "cell": {
+      "value": 0.1,
+      "unit": "mM"
+    },
+    "syringe": {
+      "value": 1.2,
+      "unit": "mM"
+    }
+  },
+  "temperature": {
+    "value": 25.0,
+    "unit": "degC"
+  },
+  "cell_volume": {
+    "value": 1.4,
+    "unit": "mL"
+  },
+  "baseline": {
+    "kind": "constant",
+    "coefficients": [
+      0.5
+    ],
+    "unit": "uJ/s"
+  },
+  "gap": {
+    "start_s": 2610.0,
+    "end_s": 2645.0,
+    "reason": "autosampler refill; samples dropped"
+  },
+  "truth": {
+    "model": "one_site",
+    "n": 1.0,
+    "log10K_1_per_mM": 2.0,
+    "dH_uJ_per_nmol": -10.0,
+    "qd_uJ": 0.5
+  }
+}
