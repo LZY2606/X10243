@@ -1,0 +1,4 @@
+# version: 1
+role,value,unit
+ligand,1200,µM
+macromolecule,60,µM

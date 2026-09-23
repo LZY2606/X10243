@@ -1,0 +1,4 @@
+# version: 1
+key,value,unit
+temperature,25,°C
+cell_volume,1.4,mL
