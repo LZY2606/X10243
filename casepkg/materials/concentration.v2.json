@@ -1,0 +1,12 @@
+{
+  "macromolecule": {
+    "value": 10.0,
+    "unit": "µM",
+    "raw": "10.0 µM"
+  },
+  "ligand_syringe": {
+    "value": 1000.0,
+    "unit": "µM",
+    "raw": "1000.0 µM"
+  }
+}

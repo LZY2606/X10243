@@ -1,0 +1,71 @@
+{
+  "rule": "same injection_id; blank heat scaled linearly by injection volume",
+  "coordinate_basis": "per matched blank injection; µcal heat and µL volume",
+  "injections": [
+    {
+      "injection_id": "I1",
+      "volume": {
+        "value": 2.0,
+        "unit": "µL",
+        "raw": "2.0 µL"
+      },
+      "heat": {
+        "value": 0.2,
+        "unit": "µcal",
+        "raw": "0.2 µcal"
+      }
+    },
+    {
+      "injection_id": "I2",
+      "volume": {
+        "value": 2.0,
+        "unit": "µL",
+        "raw": "2.0 µL"
+      },
+      "heat": {
+        "value": 0.2,
+        "unit": "µcal",
+        "raw": "0.2 µcal"
+      }
+    },
+    {
+      "injection_id": "I3",
+      "volume": {
+        "value": 2.0,
+        "unit": "µL",
+        "raw": "2.0 µL"
+      },
+      "heat": {
+        "value": 0.2,
+        "unit": "µcal",
+        "raw": "0.2 µcal"
+      }
+    },
+    {
+      "injection_id": "I5",
+      "volume": {
+        "value": 2.0,
+        "unit": "µL",
+        "raw": "2.0 µL"
+      },
+      "heat": {
+        "value": 0.2,
+        "unit": "µcal",
+        "raw": "0.2 µcal"
+      }
+    },
+    {
+      "injection_id": "I6",
+      "volume": {
+        "value": 2.0,
+        "unit": "µL",
+        "raw": "2.0 µL"
+      },
+      "heat": {
+        "value": 0.2,
+        "unit": "µcal",
+        "raw": "0.2 µcal"
+      }
+    }
+  ]
+}

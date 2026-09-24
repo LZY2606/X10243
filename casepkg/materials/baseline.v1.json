@@ -1,0 +1,8 @@
+{
+  "power": {
+    "value": 10.0,
+    "unit": "µW",
+    "raw": "10.0 µW"
+  },
+  "coordinate_basis": "acquisition-wide constant baseline"
+}

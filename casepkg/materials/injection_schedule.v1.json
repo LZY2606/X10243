@@ -1,0 +1,142 @@
+{
+  "injections": [
+    {
+      "id": "I1",
+      "time": {
+        "value": 0,
+        "unit": "s",
+        "raw": "0 s"
+      },
+      "volume": {
+        "value": 2.0,
+        "unit": "µL",
+        "raw": "2.0 µL"
+      },
+      "integrate_start": {
+        "value": 0,
+        "unit": "s",
+        "raw": "0 s"
+      },
+      "integrate_end": {
+        "value": 20,
+        "unit": "s",
+        "raw": "20 s"
+      }
+    },
+    {
+      "id": "I2",
+      "time": {
+        "value": 20,
+        "unit": "s",
+        "raw": "20 s"
+      },
+      "volume": {
+        "value": 2.0,
+        "unit": "µL",
+        "raw": "2.0 µL"
+      },
+      "integrate_start": {
+        "value": 20,
+        "unit": "s",
+        "raw": "20 s"
+      },
+      "integrate_end": {
+        "value": 60,
+        "unit": "s",
+        "raw": "60 s"
+      }
+    },
+    {
+      "id": "I3",
+      "time": {
+        "value": 60,
+        "unit": "s",
+        "raw": "60 s"
+      },
+      "volume": {
+        "value": 2.0,
+        "unit": "µL",
+        "raw": "2.0 µL"
+      },
+      "integrate_start": {
+        "value": 60,
+        "unit": "s",
+        "raw": "60 s"
+      },
+      "integrate_end": {
+        "value": 100,
+        "unit": "s",
+        "raw": "100 s"
+      }
+    },
+    {
+      "id": "I4",
+      "time": {
+        "value": 100,
+        "unit": "s",
+        "raw": "100 s"
+      },
+      "volume": {
+        "value": 2.0,
+        "unit": "µL",
+        "raw": "2.0 µL"
+      },
+      "integrate_start": {
+        "value": 100,
+        "unit": "s",
+        "raw": "100 s"
+      },
+      "integrate_end": {
+        "value": 140,
+        "unit": "s",
+        "raw": "140 s"
+      }
+    },
+    {
+      "id": "I5",
+      "time": {
+        "value": 140,
+        "unit": "s",
+        "raw": "140 s"
+      },
+      "volume": {
+        "value": 2.0,
+        "unit": "µL",
+        "raw": "2.0 µL"
+      },
+      "integrate_start": {
+        "value": 140,
+        "unit": "s",
+        "raw": "140 s"
+      },
+      "integrate_end": {
+        "value": 180,
+        "unit": "s",
+        "raw": "180 s"
+      }
+    },
+    {
+      "id": "I6",
+      "time": {
+        "value": 182,
+        "unit": "s",
+        "raw": "182 s"
+      },
+      "volume": {
+        "value": 2.0,
+        "unit": "µL",
+        "raw": "2.0 µL"
+      },
+      "integrate_start": {
+        "value": 182,
+        "unit": "s",
+        "raw": "182 s"
+      },
+      "integrate_end": {
+        "value": 222,
+        "unit": "s",
+        "raw": "222 s"
+      }
+    }
+  ]
+}

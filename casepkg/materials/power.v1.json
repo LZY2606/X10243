@@ -1,0 +1,1303 @@
+{
+  "time_unit": "s",
+  "power_unit": "µW",
+  "coordinate_basis": "seconds since acquisition start",
+  "points": [
+    {
+      "time": {
+        "value": 0.0,
+        "unit": "s",
+        "raw": "0.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 2.0,
+        "unit": "s",
+        "raw": "2.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 4.0,
+        "unit": "s",
+        "raw": "4.0 s"
+      },
+      "power": {
+        "value": 9.9,
+        "unit": "µW",
+        "raw": "9.9 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 6.0,
+        "unit": "s",
+        "raw": "6.0 s"
+      },
+      "power": {
+        "value": 9.8,
+        "unit": "µW",
+        "raw": "9.8 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 8.0,
+        "unit": "s",
+        "raw": "8.0 s"
+      },
+      "power": {
+        "value": 9.7,
+        "unit": "µW",
+        "raw": "9.7 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 10.0,
+        "unit": "s",
+        "raw": "10.0 s"
+      },
+      "power": {
+        "value": 9.6,
+        "unit": "µW",
+        "raw": "9.6 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 12.0,
+        "unit": "s",
+        "raw": "12.0 s"
+      },
+      "power": {
+        "value": 9.7,
+        "unit": "µW",
+        "raw": "9.7 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 14.0,
+        "unit": "s",
+        "raw": "14.0 s"
+      },
+      "power": {
+        "value": 9.8,
+        "unit": "µW",
+        "raw": "9.8 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 16.0,
+        "unit": "s",
+        "raw": "16.0 s"
+      },
+      "power": {
+        "value": 9.9,
+        "unit": "µW",
+        "raw": "9.9 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 18.0,
+        "unit": "s",
+        "raw": "18.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 20.0,
+        "unit": "s",
+        "raw": "20.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 22.0,
+        "unit": "s",
+        "raw": "22.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 24.0,
+        "unit": "s",
+        "raw": "24.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 26.0,
+        "unit": "s",
+        "raw": "26.0 s"
+      },
+      "power": {
+        "value": 9.974631,
+        "unit": "µW",
+        "raw": "9.974631 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 28.0,
+        "unit": "s",
+        "raw": "28.0 s"
+      },
+      "power": {
+        "value": 9.949262,
+        "unit": "µW",
+        "raw": "9.949262 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 30.0,
+        "unit": "s",
+        "raw": "30.0 s"
+      },
+      "power": {
+        "value": 9.923894,
+        "unit": "µW",
+        "raw": "9.923894 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 32.0,
+        "unit": "s",
+        "raw": "32.0 s"
+      },
+      "power": {
+        "value": 9.898525,
+        "unit": "µW",
+        "raw": "9.898525 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 34.0,
+        "unit": "s",
+        "raw": "34.0 s"
+      },
+      "power": {
+        "value": 9.873156,
+        "unit": "µW",
+        "raw": "9.873156 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 36.0,
+        "unit": "s",
+        "raw": "36.0 s"
+      },
+      "power": {
+        "value": 9.847788,
+        "unit": "µW",
+        "raw": "9.847788 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 38.0,
+        "unit": "s",
+        "raw": "38.0 s"
+      },
+      "power": {
+        "value": 9.822419,
+        "unit": "µW",
+        "raw": "9.822419 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 40.0,
+        "unit": "s",
+        "raw": "40.0 s"
+      },
+      "power": {
+        "value": 9.79705,
+        "unit": "µW",
+        "raw": "9.79705 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 42.0,
+        "unit": "s",
+        "raw": "42.0 s"
+      },
+      "power": {
+        "value": 9.822419,
+        "unit": "µW",
+        "raw": "9.822419 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 44.0,
+        "unit": "s",
+        "raw": "44.0 s"
+      },
+      "power": {
+        "value": 9.847788,
+        "unit": "µW",
+        "raw": "9.847788 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 46.0,
+        "unit": "s",
+        "raw": "46.0 s"
+      },
+      "power": {
+        "value": 9.873156,
+        "unit": "µW",
+        "raw": "9.873156 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 48.0,
+        "unit": "s",
+        "raw": "48.0 s"
+      },
+      "power": {
+        "value": 9.898525,
+        "unit": "µW",
+        "raw": "9.898525 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 50.0,
+        "unit": "s",
+        "raw": "50.0 s"
+      },
+      "power": {
+        "value": 9.923894,
+        "unit": "µW",
+        "raw": "9.923894 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 52.0,
+        "unit": "s",
+        "raw": "52.0 s"
+      },
+      "power": {
+        "value": 9.949262,
+        "unit": "µW",
+        "raw": "9.949262 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 54.0,
+        "unit": "s",
+        "raw": "54.0 s"
+      },
+      "power": {
+        "value": 9.974631,
+        "unit": "µW",
+        "raw": "9.974631 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 56.0,
+        "unit": "s",
+        "raw": "56.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 58.0,
+        "unit": "s",
+        "raw": "58.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 60.0,
+        "unit": "s",
+        "raw": "60.0 s"
+      },
+      "power": {
+        "value": 9.9,
+        "unit": "µW",
+        "raw": "9.9 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 62.0,
+        "unit": "s",
+        "raw": "62.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 64.0,
+        "unit": "s",
+        "raw": "64.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 66.0,
+        "unit": "s",
+        "raw": "66.0 s"
+      },
+      "power": {
+        "value": 9.975412,
+        "unit": "µW",
+        "raw": "9.975412 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 68.0,
+        "unit": "s",
+        "raw": "68.0 s"
+      },
+      "power": {
+        "value": 9.950825,
+        "unit": "µW",
+        "raw": "9.950825 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 70.0,
+        "unit": "s",
+        "raw": "70.0 s"
+      },
+      "power": {
+        "value": 9.926237,
+        "unit": "µW",
+        "raw": "9.926237 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 72.0,
+        "unit": "s",
+        "raw": "72.0 s"
+      },
+      "power": {
+        "value": 9.90165,
+        "unit": "µW",
+        "raw": "9.90165 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 74.0,
+        "unit": "s",
+        "raw": "74.0 s"
+      },
+      "power": {
+        "value": 9.877062,
+        "unit": "µW",
+        "raw": "9.877062 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 76.0,
+        "unit": "s",
+        "raw": "76.0 s"
+      },
+      "power": {
+        "value": 9.852475,
+        "unit": "µW",
+        "raw": "9.852475 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 78.0,
+        "unit": "s",
+        "raw": "78.0 s"
+      },
+      "power": {
+        "value": 9.827887,
+        "unit": "µW",
+        "raw": "9.827887 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 80.0,
+        "unit": "s",
+        "raw": "80.0 s"
+      },
+      "power": {
+        "value": 9.8033,
+        "unit": "µW",
+        "raw": "9.8033 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 82.0,
+        "unit": "s",
+        "raw": "82.0 s"
+      },
+      "power": {
+        "value": 9.827887,
+        "unit": "µW",
+        "raw": "9.827887 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 84.0,
+        "unit": "s",
+        "raw": "84.0 s"
+      },
+      "power": {
+        "value": 9.852475,
+        "unit": "µW",
+        "raw": "9.852475 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 86.0,
+        "unit": "s",
+        "raw": "86.0 s"
+      },
+      "power": {
+        "value": 9.877062,
+        "unit": "µW",
+        "raw": "9.877062 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 88.0,
+        "unit": "s",
+        "raw": "88.0 s"
+      },
+      "power": {
+        "value": 9.90165,
+        "unit": "µW",
+        "raw": "9.90165 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 90.0,
+        "unit": "s",
+        "raw": "90.0 s"
+      },
+      "power": {
+        "value": 9.926237,
+        "unit": "µW",
+        "raw": "9.926237 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 92.0,
+        "unit": "s",
+        "raw": "92.0 s"
+      },
+      "power": {
+        "value": 9.950825,
+        "unit": "µW",
+        "raw": "9.950825 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 94.0,
+        "unit": "s",
+        "raw": "94.0 s"
+      },
+      "power": {
+        "value": 9.975413,
+        "unit": "µW",
+        "raw": "9.975413 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 96.0,
+        "unit": "s",
+        "raw": "96.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 98.0,
+        "unit": "s",
+        "raw": "98.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 100.0,
+        "unit": "s",
+        "raw": "100.0 s"
+      },
+      "power": {
+        "value": 9.9,
+        "unit": "µW",
+        "raw": "9.9 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 102.0,
+        "unit": "s",
+        "raw": "102.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 104.0,
+        "unit": "s",
+        "raw": "104.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 106.0,
+        "unit": "s",
+        "raw": "106.0 s"
+      },
+      "power": {
+        "value": 9.975412,
+        "unit": "µW",
+        "raw": "9.975412 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 108.0,
+        "unit": "s",
+        "raw": "108.0 s"
+      },
+      "power": {
+        "value": 9.950825,
+        "unit": "µW",
+        "raw": "9.950825 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 110.0,
+        "unit": "s",
+        "raw": "110.0 s"
+      },
+      "power": {
+        "value": 9.926237,
+        "unit": "µW",
+        "raw": "9.926237 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 112.0,
+        "unit": "s",
+        "raw": "112.0 s"
+      },
+      "power": {
+        "value": 9.90165,
+        "unit": "µW",
+        "raw": "9.90165 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 114.0,
+        "unit": "s",
+        "raw": "114.0 s"
+      },
+      "power": {
+        "value": 9.877062,
+        "unit": "µW",
+        "raw": "9.877062 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 116.0,
+        "unit": "s",
+        "raw": "116.0 s"
+      },
+      "power": {
+        "value": 9.852475,
+        "unit": "µW",
+        "raw": "9.852475 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 118.0,
+        "unit": "s",
+        "raw": "118.0 s"
+      },
+      "power": {
+        "value": 9.827887,
+        "unit": "µW",
+        "raw": "9.827887 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 120.0,
+        "unit": "s",
+        "raw": "120.0 s"
+      },
+      "power": {
+        "value": 9.8033,
+        "unit": "µW",
+        "raw": "9.8033 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 122.0,
+        "unit": "s",
+        "raw": "122.0 s"
+      },
+      "power": {
+        "value": 9.827887,
+        "unit": "µW",
+        "raw": "9.827887 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 124.0,
+        "unit": "s",
+        "raw": "124.0 s"
+      },
+      "power": {
+        "value": 9.852475,
+        "unit": "µW",
+        "raw": "9.852475 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 126.0,
+        "unit": "s",
+        "raw": "126.0 s"
+      },
+      "power": {
+        "value": 9.877062,
+        "unit": "µW",
+        "raw": "9.877062 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 128.0,
+        "unit": "s",
+        "raw": "128.0 s"
+      },
+      "power": {
+        "value": 9.90165,
+        "unit": "µW",
+        "raw": "9.90165 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 130.0,
+        "unit": "s",
+        "raw": "130.0 s"
+      },
+      "power": {
+        "value": 9.926237,
+        "unit": "µW",
+        "raw": "9.926237 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 132.0,
+        "unit": "s",
+        "raw": "132.0 s"
+      },
+      "power": {
+        "value": 9.950825,
+        "unit": "µW",
+        "raw": "9.950825 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 134.0,
+        "unit": "s",
+        "raw": "134.0 s"
+      },
+      "power": {
+        "value": 9.975413,
+        "unit": "µW",
+        "raw": "9.975413 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 136.0,
+        "unit": "s",
+        "raw": "136.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 138.0,
+        "unit": "s",
+        "raw": "138.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 140.0,
+        "unit": "s",
+        "raw": "140.0 s"
+      },
+      "power": {
+        "value": 9.9,
+        "unit": "µW",
+        "raw": "9.9 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 142.0,
+        "unit": "s",
+        "raw": "142.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 144.0,
+        "unit": "s",
+        "raw": "144.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 146.0,
+        "unit": "s",
+        "raw": "146.0 s"
+      },
+      "power": {
+        "value": 9.958369,
+        "unit": "µW",
+        "raw": "9.958369 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 148.0,
+        "unit": "s",
+        "raw": "148.0 s"
+      },
+      "power": {
+        "value": 9.916738,
+        "unit": "µW",
+        "raw": "9.916738 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 150.0,
+        "unit": "s",
+        "raw": "150.0 s"
+      },
+      "power": {
+        "value": 9.875108,
+        "unit": "µW",
+        "raw": "9.875108 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 152.0,
+        "unit": "s",
+        "raw": "152.0 s"
+      },
+      "power": {
+        "value": 9.833477,
+        "unit": "µW",
+        "raw": "9.833477 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 154.0,
+        "unit": "s",
+        "raw": "154.0 s"
+      },
+      "power": {
+        "value": 9.791846,
+        "unit": "µW",
+        "raw": "9.791846 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 156.0,
+        "unit": "s",
+        "raw": "156.0 s"
+      },
+      "power": {
+        "value": 9.750215,
+        "unit": "µW",
+        "raw": "9.750215 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 158.0,
+        "unit": "s",
+        "raw": "158.0 s"
+      },
+      "power": {
+        "value": 9.785899,
+        "unit": "µW",
+        "raw": "9.785899 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 160.0,
+        "unit": "s",
+        "raw": "160.0 s"
+      },
+      "power": {
+        "value": 9.821582,
+        "unit": "µW",
+        "raw": "9.821582 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 162.0,
+        "unit": "s",
+        "raw": "162.0 s"
+      },
+      "power": {
+        "value": 9.857266,
+        "unit": "µW",
+        "raw": "9.857266 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 164.0,
+        "unit": "s",
+        "raw": "164.0 s"
+      },
+      "power": {
+        "value": 9.892949,
+        "unit": "µW",
+        "raw": "9.892949 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 166.0,
+        "unit": "s",
+        "raw": "166.0 s"
+      },
+      "power": {
+        "value": 9.928633,
+        "unit": "µW",
+        "raw": "9.928633 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 168.0,
+        "unit": "s",
+        "raw": "168.0 s"
+      },
+      "power": {
+        "value": 9.964316,
+        "unit": "µW",
+        "raw": "9.964316 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 170.0,
+        "unit": "s",
+        "raw": "170.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 182.0,
+        "unit": "s",
+        "raw": "182.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 184.0,
+        "unit": "s",
+        "raw": "184.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 186.0,
+        "unit": "s",
+        "raw": "186.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 188.0,
+        "unit": "s",
+        "raw": "188.0 s"
+      },
+      "power": {
+        "value": 9.97385,
+        "unit": "µW",
+        "raw": "9.97385 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 190.0,
+        "unit": "s",
+        "raw": "190.0 s"
+      },
+      "power": {
+        "value": 9.9477,
+        "unit": "µW",
+        "raw": "9.9477 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 192.0,
+        "unit": "s",
+        "raw": "192.0 s"
+      },
+      "power": {
+        "value": 9.92155,
+        "unit": "µW",
+        "raw": "9.92155 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 194.0,
+        "unit": "s",
+        "raw": "194.0 s"
+      },
+      "power": {
+        "value": 9.8954,
+        "unit": "µW",
+        "raw": "9.8954 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 196.0,
+        "unit": "s",
+        "raw": "196.0 s"
+      },
+      "power": {
+        "value": 9.86925,
+        "unit": "µW",
+        "raw": "9.86925 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 198.0,
+        "unit": "s",
+        "raw": "198.0 s"
+      },
+      "power": {
+        "value": 9.8431,
+        "unit": "µW",
+        "raw": "9.8431 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 200.0,
+        "unit": "s",
+        "raw": "200.0 s"
+      },
+      "power": {
+        "value": 9.81695,
+        "unit": "µW",
+        "raw": "9.81695 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 202.0,
+        "unit": "s",
+        "raw": "202.0 s"
+      },
+      "power": {
+        "value": 9.7908,
+        "unit": "µW",
+        "raw": "9.7908 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 204.0,
+        "unit": "s",
+        "raw": "204.0 s"
+      },
+      "power": {
+        "value": 9.81695,
+        "unit": "µW",
+        "raw": "9.81695 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 206.0,
+        "unit": "s",
+        "raw": "206.0 s"
+      },
+      "power": {
+        "value": 9.8431,
+        "unit": "µW",
+        "raw": "9.8431 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 208.0,
+        "unit": "s",
+        "raw": "208.0 s"
+      },
+      "power": {
+        "value": 9.86925,
+        "unit": "µW",
+        "raw": "9.86925 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 210.0,
+        "unit": "s",
+        "raw": "210.0 s"
+      },
+      "power": {
+        "value": 9.8954,
+        "unit": "µW",
+        "raw": "9.8954 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 212.0,
+        "unit": "s",
+        "raw": "212.0 s"
+      },
+      "power": {
+        "value": 9.92155,
+        "unit": "µW",
+        "raw": "9.92155 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 214.0,
+        "unit": "s",
+        "raw": "214.0 s"
+      },
+      "power": {
+        "value": 9.9477,
+        "unit": "µW",
+        "raw": "9.9477 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 216.0,
+        "unit": "s",
+        "raw": "216.0 s"
+      },
+      "power": {
+        "value": 9.97385,
+        "unit": "µW",
+        "raw": "9.97385 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 218.0,
+        "unit": "s",
+        "raw": "218.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 220.0,
+        "unit": "s",
+        "raw": "220.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 222.0,
+        "unit": "s",
+        "raw": "222.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    },
+    {
+      "time": {
+        "value": 224.0,
+        "unit": "s",
+        "raw": "224.0 s"
+      },
+      "power": {
+        "value": 10.0,
+        "unit": "µW",
+        "raw": "10.0 µW"
+      }
+    }
+  ]
+}

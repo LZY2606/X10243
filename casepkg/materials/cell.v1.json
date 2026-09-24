@@ -1,0 +1,12 @@
+{
+  "temperature": {
+    "value": 25.0,
+    "unit": "°C",
+    "raw": "25.0 °C"
+  },
+  "cell_volume": {
+    "value": 200.0,
+    "unit": "µL",
+    "raw": "200.0 µL"
+  }
+}
