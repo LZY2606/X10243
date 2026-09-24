@@ -1,0 +1,15 @@
+{
+  "case_id": "itc-titration-thermogram-v1",
+  "title": "滴定热谱：ITC 注射积分、稀释热与绑定模型审议",
+  "narrative": [
+    {"step": 1, "act": "import_initial", "materials": ["power", "baseline", "injections", "concentrations_v1", "conditions", "blank_power_v1+blank_injections"]},
+    {"step": 2, "act": "integrate", "params": {"lag_s": 60, "width_s": 120}},
+    {"step": 3, "act": "decide", "decision": "discard_injection", "index": 1},
+    {"step": 4, "act": "decide", "decision": "window_endpoint", "index": 6, "clip_to_gap": true},
+    {"step": 5, "act": "fit_models", "expect_tie": false},
+    {"step": 6, "act": "branch", "name": "conflict-dilution-only", "decision": "reject_all_binding", "accept": "dilution"},
+    {"step": 7, "act": "revise", "stream": "concentration", "file": "concentrations_v2.csv", "expect_models_stale": true, "expect_integrations_unchanged": true},
+    {"step": 8, "act": "revise", "stream": "blank", "power": "blank_power_v2.csv", "expect_local_only": true}
+  ],
+  "boundary_cases": ["overlapping_peaks:4-5", "first_injection_discard:1", "blank_correspondence_missing:12", "concentration_revision:v1->v2", "multiple_equivalent_models", "data_gap:6", "integration_endpoint:6", "conflicting_human_decisions:main-vs-branch"]
+}

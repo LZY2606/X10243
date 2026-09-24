@@ -1,0 +1,4 @@
+key,value,kind,unit
+temperature,25.0,temperature,C
+cell_volume,202.4,volume,µL
+stir_rate,750,dimensionless,
