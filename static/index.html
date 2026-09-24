@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>ITC 审阅 — 注射积分 / 稀释热 / 绑定模型</title>
+<style>
+  body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; margin: 16px; color: #222; }
+  h1 { font-size: 20px; } h2 { font-size: 15px; margin: 18px 0 6px; }
+  table { border-collapse: collapse; font-size: 12px; }
+  td, th { border: 1px solid #ccc; padding: 3px 7px; }
+  .stale { color: #b00; } .current { color: #080; }
+  .diag { color: #a60; font-size: 11px; }
+  .inj-ok {} .inj-discarded { color: #888; } .inj-truncated_gap { color: #a60; }
+  .inj-invalid, .inj-missing_blank { color: #b00; }
+  .hl rect.win { stroke: #00c; stroke-width: 2; }
+  .hl circle.pt { stroke: #00c; stroke-width: 2; }
+  tr.hl td { background: #def; }
+  #events div { cursor: pointer; font-size: 12px; padding: 1px 4px; }
+  #events div:hover { background: #eee; }
+  .col { display: inline-block; vertical-align: top; margin-right: 24px; }
+  button { font-size: 12px; }
+  code { font-size: 11px; }
+</style>
+</head>
+<body>
+<h1>ITC 审阅台 <small>— 滴定热谱：注射积分、稀释热与绑定模型审议</small></h1>
+<div id="meta"></div>
+
+<h2>材料版本（不可变材料，分类型独立版本化）</h2>
+<div id="materials"></div>
+
+<h2>功率曲线 · 注射区间 · 数据缺口</h2>
+<svg id="trace" width="940" height="230" style="border:1px solid #ccc"></svg>
+
+<h2>每次注射积分与稀释扣除</h2>
+<div id="injections"></div>
+
+<h2>积分点与模型候选（一位点 / 多位点 / 稀释假设）</h2>
+<svg id="heats" width="460" height="240" style="border:1px solid #ccc"></svg>
+<svg id="resid" width="460" height="240" style="border:1px solid #ccc"></svg>
+<div id="models"></div>
+
+<h2>决定</h2>
+<div id="decisions"></div>
+<div>
+  <select id="d-target"></select>
+  <select id="d-action"><option>accept</option><option>reject</option><option>adjust</option></select>
+  <input id="d-branch" value="main" size="6">
+  <input id="d-rationale" placeholder="理由" size="30">
+  <button onclick="decide()">记录决定</button>
+</div>
+
+<h2>事件时间线（点击回到任一历史事件）</h2>
+<div id="events"></div>
+
+<h2>诊断</h2>
+<div id="diags"></div>
+
+<h2>归档</h2>
+<button onclick="doExport()">导出</button>
+<button onclick="doImport()">删除本地库并重新导入最近导出</button>
+<a href="/api/counterexamples" target="_blank">反例档案报告</a>
+<span id="archive-msg"></span>
+
+<script>
+let STATE = null, SEQ = null, LAST_EXPORT = null;
+
+async function load(seq) {
+  SEQ = seq;
+  const url = seq ? `/api/state?seq=${seq}` : "/api/state";
+  STATE = await (await fetch(url)).json();
+  render();
+}
+const esc = s => String(s).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const latest = kind => STATE.results.filter(r => r.kind === kind).slice(-1)[0];
+
+function render() {
+  document.getElementById("meta").innerHTML =
+    `视图事件序号: <code data-id="view:seq">${SEQ ?? STATE.latest_seq}</code> / ${STATE.latest_seq}` +
+    (SEQ && SEQ !== STATE.latest_seq ? ` <b class="stale">历史视图</b> <button onclick="load(null)">回到最新</button>` : "") +
+    (STATE.recovered_writes.length ? ` <span class="stale">恢复的半写: ${STATE.recovered_writes.join(",")}</span>` : "");
+
+  document.getElementById("materials").innerHTML = "<table><tr><th>类型</th><th>版本</th><th>身份</th></tr>" +
+    Object.values(STATE.materials).map(m =>
+      `<tr><td>${m.kind}</td><td data-id="${m.id}">v${m.version}</td><td><code data-id="${m.id}">${m.id}</code></td></tr>`).join("") + "</table>";
+
+  document.getElementById("decisions").innerHTML = "<table><tr><th>事件</th><th>动作</th><th>对象</th><th>分支</th><th>理由</th></tr>" +
+    STATE.decisions.map(d => `<tr><td><code data-id="${d.id}">${d.id}</code></td><td>${d.kind}</td>
+      <td><code data-id="${d.payload.target}">${esc(d.payload.target)}</code></td>
+      <td>${esc(d.payload.branch)}</td><td>${esc(d.payload.rationale)}</td></tr>`).join("") + "</table>";
+
+  const fits = STATE.results.filter(r => r.kind === "fit");
+  const tgt = document.getElementById("d-target");
+  tgt.innerHTML = fits.flatMap(f => (f.payload.models || []).map(m =>
+    `<option value="${f.id}#${m.model}">${f.id}#${m.model}</option>`)).join("");
+
+  document.getElementById("events").innerHTML = STATE.events.map(e =>
+    `<div data-id="${e.id}" onclick="load(${e.seq})"><code>${e.id}</code> ${e.kind} ${esc(JSON.stringify(e.payload).slice(0,90))}</div>`).join("");
+
+  renderTrace(); renderInjections(); renderModels(); renderDiags();
+}
+
+function renderTrace() {
+  const svg = document.getElementById("trace");
+  const mat = STATE.materials.power_trace;
+  if (!mat) { svg.innerHTML = ""; return; }
+  const S = mat.payload.samples, W = 940, H = 230, pad = 30;
+  const xs = S.map(s => s.t), ys = S.map(s => s.p);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  const X = t => pad + (t - x0) / (x1 - x0) * (W - 2 * pad);
+  const Y = p => H - pad - (p - y0) / (y1 - y0 || 1) * (H - 2 * pad);
+  let inner = `<text x="4" y="12" font-size="10">功率 (${mat.payload.power_unit}) vs 时间 (${mat.payload.time_unit}, 基准 ${mat.payload.time_base}) <tspan data-id="${mat.id}">${mat.id}</tspan></text>`;
+  const integ = latest("integration");
+  if (integ && integ.payload.gaps) {
+    for (const g of integ.payload.gaps)
+      inner += `<rect x="${X(g[0])}" y="${pad}" width="${Math.max(2, X(g[1]) - X(g[0]))}" height="${H - 2*pad}" fill="#f88" opacity="0.5"><title>数据缺口</title></rect>`;
+    for (const e of integ.payload.injections || []) {
+      if (e.window) {
+        const cls = e.status === "ok" ? "#0a0" : (e.status === "truncated_gap" ? "#fa0" : "#999");
+        inner += `<rect class="win" data-inj="${e.injection_id}" x="${X(e.window[0])}" y="${pad}" width="${Math.max(2, X(e.window[1]) - X(e.window[0]))}" height="${H - 2*pad}" fill="${cls}" opacity="0.15"><title>${e.injection_id} 积分窗 [${e.window.map(v=>v.toFixed(1))}] ${e.status}</title></rect>`;
+      }
+      const t0 = STATE.materials.injection_schedule.payload.injections[e.index].time.value;
+      inner += `<line x1="${X(t0)}" y1="${pad}" x2="${X(t0)}" y2="${H-pad}" stroke="#88a" stroke-dasharray="2,2"><title>${e.injection_id}</title></line>`;
+    }
+  }
+  inner += `<polyline fill="none" stroke="#224" stroke-width="1" points="${S.map(s => X(s.t).toFixed(1)+","+Y(s.p).toFixed(1)).join(" ")}"/>`;
+  svg.innerHTML = inner;
+  linkify(svg);
+}
+
+function renderInjections() {
+  const dil = latest("dilution");
+  if (!dil) { document.getElementById("injections").innerHTML = "<i>无稀释结果</i>"; return; }
+  const rows = dil.payload.injections.map(e => {
+    const dg = e.diagnostics.map(d => `<div class="diag" data-id="${d.code}">${d.code} @ ${d.path}</div>`).join("");
+    return `<tr data-inj="${e.injection_id}" class="inj-${e.status}">
+      <td><code data-id="${e.injection_id}">${e.injection_id}</code></td>
+      <td>${e.volume_uL == null ? "raw:" + esc(JSON.stringify(e.diagnostics.length ? "kept" : "")) : e.volume_uL.toFixed(2) + " uL"}</td>
+      <td>${e.sample_heat_uJ == null ? "—" : e.sample_heat_uJ.toFixed(2) + " uJ"}</td>
+      <td>${e.blank_heat_uJ == null ? "—" : e.blank_heat_uJ.toFixed(2) + " uJ"}</td>
+      <td>${e.corrected_uJ == null ? "—" : e.corrected_uJ.toFixed(2) + " uJ"}</td>
+      <td class="inj-${e.status}">${e.status}</td><td>${dg}</td></tr>`;
+  }).join("");
+  document.getElementById("injections").innerHTML =
+    `<div>稀释对应规则: <code data-id="${dil.id}">${dil.payload.rule}</code> · 结果 <code data-id="${dil.id}">${dil.id}</code> <span class="${dil.freshness}">${dil.freshness}</span></div>` +
+    `<table><tr><th>注射</th><th>体积</th><th>样品热</th><th>空白热</th><th>扣除后</th><th>状态</th><th>诊断</th></tr>${rows}</table>`;
+  linkify(document.getElementById("injections"));
+}
+
+function renderModels() {
+  const fit = latest("fit");
+  const mdiv = document.getElementById("models");
+  const hsvg = document.getElementById("heats"), rsvg = document.getElementById("resid");
+  if (!fit || !fit.payload.models) { mdiv.innerHTML = "<i>无拟合结果</i>"; hsvg.innerHTML = rsvg.innerHTML = ""; return; }
+  const pts = fit.payload.points, colors = {one_site: "#06c", two_site: "#c60", dilution_const: "#888"};
+  mdiv.innerHTML = `<div>拟合 <code data-id="${fit.id}">${fit.id}</code> <span class="${fit.freshness}">${fit.freshness}</span> · 温度 ${fit.payload.temperature_K.toFixed(2)} K · 池浓度 ${fit.payload.cell_mM} mM · 等优候选: ${fit.payload.candidates.join(", ")}</div>` +
+    "<table><tr><th>模型</th><th>参数</th><th>SSR</th><th>候选</th></tr>" +
+    fit.payload.models.map(m => `<tr><td><code data-id="${fit.id}#${m.model}">${m.model}</code></td>
+      <td>${esc(JSON.stringify(m.params))}</td><td>${m.ssr.toFixed(4)}</td>
+      <td>${m.is_candidate ? "✓" : ""}</td></tr>`).join("") + "</table>";
+
+  const W = 460, H = 240, pad = 34, n = pts.length;
+  const allY = pts.map(p => p.heat_uJ).concat(fit.payload.models.flatMap(m => m.predicted_uJ));
+  const y0 = Math.min(...allY), y1 = Math.max(...allY);
+  const X = i => pad + (i + 0.5) / n * (W - 2 * pad);
+  const Y = v => H - pad - (v - y0) / (y1 - y0 || 1) * (H - 2 * pad);
+  let h = `<text x="4" y="12" font-size="10">积分点 (uJ) vs 注射序号 — 配体浓度基准: 累积注射/池体积</text>`;
+  for (const m of fit.payload.models)
+    h += `<polyline fill="none" stroke="${colors[m.model]}" stroke-width="${m.is_candidate ? 2 : 1}" points="${m.predicted_uJ.map((v,i)=>X(i).toFixed(1)+","+Y(v).toFixed(1)).join(" ")}"><title>${m.model}</title></polyline>`;
+  pts.forEach((p, i) => {
+    h += `<circle class="pt" data-inj="${p.injection_id}" cx="${X(i)}" cy="${Y(p.heat_uJ)}" r="4" fill="#111"><title>${p.injection_id}: ${p.heat_uJ.toFixed(2)} uJ @ ${p.ligand_mM.toFixed(4)} mM</title></circle>`;
+  });
+  hsvg.innerHTML = h; linkify(hsvg);
+
+  const allR = fit.payload.models.flatMap(m => m.residuals_uJ);
+  const r1 = Math.max(...allR.map(Math.abs), 1e-9);
+  const RY = v => H/2 - v / r1 * (H/2 - pad);
+  let r = `<text x="4" y="12" font-size="10">拟合残差 (uJ)</text><line x1="${pad}" y1="${H/2}" x2="${W-pad}" y2="${H/2}" stroke="#999"/>`;
+  fit.payload.models.forEach((m, mi) => {
+    m.residuals_uJ.forEach((v, i) => {
+      r += `<rect data-inj="${pts[i].injection_id}" x="${X(i)-3+mi*3}" y="${Math.min(RY(v), H/2)}" width="2.5" height="${Math.abs(RY(v)-H/2)}" fill="${colors[m.model]}"><title>${m.model} ${pts[i].injection_id}: ${v.toFixed(3)}</title></rect>`;
+    });
+  });
+  rsvg.innerHTML = r; linkify(rsvg);
+}
+
+function renderDiags() {
+  const all = STATE.results.flatMap(r => (r.payload.diagnostics || []).map(d =>
+    `<div class="diag" data-id="${r.id}"><code>${r.id}</code> ${d.code} @ ${d.path}: ${esc(d.message)}</div>`));
+  document.getElementById("diags").innerHTML = all.join("") || "<i>无</i>";
+}
+
+function linkify(root) {
+  root.querySelectorAll("[data-inj]").forEach(el => {
+    el.addEventListener("mouseenter", () => highlight(el.dataset.inj, true));
+    el.addEventListener("mouseleave", () => highlight(el.dataset.inj, false));
+  });
+}
+function highlight(inj, on) {
+  document.querySelectorAll(`[data-inj="${inj}"]`).forEach(el => el.classList.toggle("hl", on));
+}
+
+async function decide() {
+  await fetch("/api/decisions", {method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({target: document.getElementById("d-target").value,
+      action: document.getElementById("d-action").value,
+      branch: document.getElementById("d-branch").value,
+      rationale: document.getElementById("d-rationale").value})});
+  load(SEQ === STATE.latest_seq ? null : SEQ);
+}
+async function doExport() {
+  LAST_EXPORT = await (await fetch("/api/export")).json();
+  document.getElementById("archive-msg").textContent = ` 已导出 ${LAST_EXPORT.events.length} 事件 (digest ${LAST_EXPORT.digest.slice(0,12)}…)`;
+}
+async function doImport() {
+  if (!LAST_EXPORT) { LAST_EXPORT = await (await fetch("/api/export")).json(); }
+  const r = await (await fetch("/api/import", {method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(LAST_EXPORT)})).json();
+  document.getElementById("archive-msg").textContent = ` 重新导入: ${r.kind}, ${r.events} 事件`;
+  load(null);
+}
+load(null);
+</script>
+</body>
+</html>
