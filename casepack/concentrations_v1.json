@@ -1,0 +1,15 @@
+{
+  "label": "ligand-into-protein, lot A",
+  "syringe": {
+    "value": "3.00",
+    "unit": "mM"
+  },
+  "cell": {
+    "value": "0.050",
+    "unit": "mM"
+  },
+  "syringe_lot": {
+    "value": "n/a",
+    "unit": "unknown"
+  }
+}

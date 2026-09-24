@@ -1,0 +1,41 @@
+{
+  "title": "Titration thermogram: ITC injection integration, dilution heat and binding-model review",
+  "coordinate_basis": {
+    "time": "s since run start",
+    "power": "ucal/s",
+    "temperature": "C",
+    "volumes": "uL",
+    "concentrations": "mM",
+    "cell_volume": "mL"
+  },
+  "truth": {
+    "Ka": 2000000.0,
+    "dH_kJ_mol": -40.0,
+    "n": 1.0,
+    "syringe_M": 0.003,
+    "cell_M": 5e-05,
+    "cell_volume_L": 0.0014,
+    "dilution_kJ_mol": 0.5
+  },
+  "gap_s": [
+    1150.0,
+    1180.0
+  ],
+  "expected_diagnostics": [
+    "window_crosses_gap",
+    "blank_missing",
+    "unit_unknown",
+    "multiple_equally_good_models",
+    "overlap"
+  ],
+  "narrative": [
+    "import all materials v1 (each kind versioned separately)",
+    "integrate sample + blank; gap truncates injection 9 window",
+    "subtract dilution heat with explicit by_index rule; blank missing for injections 20-24",
+    "fit one-site / two-site / dilution candidates",
+    "decision: discard first injection from fitting",
+    "concentration revision v2 -> models stale, integrals unchanged",
+    "conflicting decisions on main vs review branch",
+    "branch 'overlap': schedule v2 moves injections 18-19 -> overlap flags, impact limited to injections 17-19"
+  ]
+}
