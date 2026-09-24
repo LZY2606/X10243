@@ -1,0 +1,2 @@
+syringe = 0.60 mM
+cell = 0.030 mM

@@ -1,0 +1,66 @@
+{
+  "format": "itc-casepack/1",
+  "title": "滴定热谱：ITC 注射积分、稀释热与绑定模型审议",
+  "seed": 20260925,
+  "units_basis": {
+    "time": "s（相对采集起点）",
+    "power": "µcal/s",
+    "energy": "cal",
+    "volume": "µL 原文 → L 规范化",
+    "concentration": "mM 原文 → M 规范化",
+    "temperature": "°C 原文 → K 规范化"
+  },
+  "scenarios": [
+    {
+      "code": "overlapping_peaks",
+      "injections": [
+        9,
+        10
+      ]
+    },
+    {
+      "code": "first_injection_discarded",
+      "injections": [
+        1
+      ]
+    },
+    {
+      "code": "gap_and_endpoint",
+      "gap_s": [
+        2360.0,
+        2440.0
+      ],
+      "injections": [
+        14
+      ]
+    },
+    {
+      "code": "blank_missing",
+      "injections": [
+        13
+      ]
+    },
+    {
+      "code": "concentration_revision",
+      "v1": "0.60 mM",
+      "v2": "0.54 mM"
+    },
+    {
+      "code": "multiple_equivalent_models"
+    },
+    {
+      "code": "conflicting_manual_decisions"
+    }
+  ],
+  "files": [
+    "baseline.txt",
+    "blank.txt",
+    "cell_volume.txt",
+    "concentration.txt",
+    "injections.csv",
+    "narrative.md",
+    "power.csv",
+    "revisions/concentration_v2.txt",
+    "temperature.txt"
+  ]
+}
