@@ -1,0 +1,38 @@
+{
+  "domain": "titration thermogram: ITC injection integration, dilution heat and binding-model review",
+  "time_basis": "experiment_seconds; t=0 is acquisition start, shared by sample runs",
+  "coordinate_basis": "all series time columns are seconds relative to acquisition start",
+  "materials": {
+    "power": "power.csv",
+    "baseline": "baseline.csv",
+    "blank": "blank.csv",
+    "schedule": "schedule.csv",
+    "blank_schedule": "blank_schedule.csv",
+    "conditions": "conditions.csv",
+    "concentration": "concentration.csv"
+  },
+  "revision": {
+    "concentration": "revision/concentration_v2.csv"
+  },
+  "local_patch": {
+    "power": "patch/power_local.csv"
+  },
+  "features": [
+    "overlapping_post_injection_peaks",
+    "first_injection_discard",
+    "blank_correspondence_missing_shot_12",
+    "concentration_revision_invalidates_fit_not_integral",
+    "multiple_equivalent_models",
+    "data_gap_shot_7",
+    "integration_endpoints"
+  ],
+  "injection_interval_s": 24.0,
+  "integration_post_window_s": 120,
+  "units": {
+    "power": "uW (canonical W)",
+    "time": "s",
+    "volume": "uL (canonical L)",
+    "temperature": "C (canonical K)",
+    "concentration": "mM (canonical M)"
+  }
+}
