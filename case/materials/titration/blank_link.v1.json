@@ -1,0 +1,9 @@
+{
+  "schema": "itc-material/blank_link/1.0",
+  "blank_run": "blank-buffer-2026-09-24",
+  "correspondence": {
+    "rule": "ordinal",
+    "discard_first_in_blank": true
+  },
+  "note": "空白首注为预注射，按规则丢弃；对应缺失须显式记录"
+}

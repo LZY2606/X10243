@@ -1,0 +1,72 @@
+{
+  "schema": "itc-replay/1.0",
+  "title": "滴定热谱：ITC 注射积分、稀释热与绑定模型审议",
+  "runs": {
+    "titration": "titration-2026-09-24",
+    "blank": "blank-buffer-2026-09-24",
+    "flatrun": "flatrun-2026-09-24"
+  },
+  "situations": [
+    {
+      "code": "overlapping_peaks",
+      "ordinals": [
+        3,
+        4
+      ],
+      "rule": "injection windows end at the next injection time"
+    },
+    {
+      "code": "first_injection_discard",
+      "ordinal": 1
+    },
+    {
+      "code": "blank_counterpart_missing",
+      "ordinal": 6,
+      "rule": "ordinal + discard_first_in_blank"
+    },
+    {
+      "code": "concentration_revision",
+      "from_mM": 0.4,
+      "to_mM": 0.32,
+      "effect": "models stale; original integrals unchanged"
+    },
+    {
+      "code": "multiple_equivalent_models",
+      "branch": "boundary-flat",
+      "rule": "keep all candidates within SSR relative tolerance"
+    },
+    {
+      "code": "data_gap_and_endpoint",
+      "ordinal": 5,
+      "gap_s": [
+        355.0,
+        372.0
+      ],
+      "endpoint": "before_gap"
+    },
+    {
+      "code": "local_power_patch",
+      "interval_s": [
+        490.0,
+        560.0
+      ],
+      "effect": "only ordinal 7/8 derived records change"
+    },
+    {
+      "code": "conflicting_decisions",
+      "model": "one_site",
+      "decisions": [
+        "accept",
+        "reject"
+      ]
+    }
+  ],
+  "units_and_references": {
+    "time": "s from acquisition start",
+    "power": "cal/s",
+    "energy": "cal (display µcal)",
+    "volume": "L (source µL/mL retained)",
+    "concentration": "M (source mM/µM retained)",
+    "temperature": "K (source °C retained)"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "itc-material/injections/1.0",
+  "time_reference": "t=0 at acquisition start",
+  "injections": [
+    {
+      "ordinal": 1,
+      "time": {
+        "value": "20",
+        "unit": "s"
+      },
+      "volume": {
+        "value": "2.0",
+        "unit": "µL"
+      },
+      "discard_first": true
+    },
+    {
+      "ordinal": 2,
+      "time": {
+        "value": "100",
+        "unit": "s"
+      },
+      "volume": {
+        "value": "6.0",
+        "unit": "µL"
+      }
+    },
+    {
+      "ordinal": 3,
+      "time": {
+        "value": "180",
+        "unit": "s"
+      },
+      "volume": {
+        "value": "6.0",
+        "unit": "µL"
+      }
+    },
+    {
+      "ordinal": 4,
+      "time": {
+        "value": "240",
+        "unit": "s"
+      },
+      "volume": {
+        "value": "6.0",
+        "unit": "µL"
+      }
+    },
+    {
+      "ordinal": 5,
+      "time": {
+        "value": "300",
+        "unit": "s"
+      },
+      "volume": {
+        "value": "6.0",
+        "unit": "µL"
+      }
+    },
+    {
+      "ordinal": 6,
+      "time": {
+        "value": "420",
+        "unit": "s"
+      },
+      "volume": {
+        "value": "8.0",
+        "unit": "µL"
+      }
+    },
+    {
+      "ordinal": 7,
+      "time": {
+        "value": "510",
+        "unit": "s"
+      },
+      "volume": {
+        "value": "8.0",
+        "unit": "µL"
+      }
+    }
+  ]
+}

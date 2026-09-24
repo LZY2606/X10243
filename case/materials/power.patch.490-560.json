@@ -1,0 +1,791 @@
+{
+  "schema": "itc-material/power-patch/1.0",
+  "replaces_interval_s": [
+    490.0,
+    560.0
+  ],
+  "samples": [
+    {
+      "t": {
+        "value": "490",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.000000000e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "491",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.000000000e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "492",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.000000000e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "493",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.000000000e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "494",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.000000000e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "495",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.000000000e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "496",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.000000000e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "497",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.000000000e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "498",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.000000000e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "499",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.000000000e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "500",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.000000000e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "501",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.478149406e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "502",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.687381274e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "503",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.755946569e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "504",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.752897117e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "505",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.715213036e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "506",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.662519931e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "507",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.605071115e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "508",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.548075008e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "509",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.494039428e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "510",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.444039992e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "511",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.398405019e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "512",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.357084100e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "513",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.319845311e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "514",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.286379724e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "515",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.256355867e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "516",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.229447259e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "517",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.205345538e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "518",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.183765975e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "519",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.164449005e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "520",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.147159770e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "521",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.131686700e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "522",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.117839714e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "523",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.105448302e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "524",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.094359663e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "525",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.084436940e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "526",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.075557605e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "527",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.067611975e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "528",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.060501887e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "529",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.054139485e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "530",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.048446149e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "531",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.043351524e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "532",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.038792651e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "533",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.034713191e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "534",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.031062729e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "535",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.027796152e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "536",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.024873089e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "537",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.022257419e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "538",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.019916813e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "539",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.017822348e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "540",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.015948137e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "541",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.014271020e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "542",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.012770270e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "543",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.011427340e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "544",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.010225633e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "545",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.009150298e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "546",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.008188047e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "547",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.007326986e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "548",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.006556475e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "549",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.005866992e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "550",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.005250015e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "551",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.004697920e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "552",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.004203883e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "553",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.003761800e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "554",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.003366207e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "555",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.003012214e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "556",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.002695448e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "557",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.002411992e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "558",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.002158346e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "559",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.001931373e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    },
+    {
+      "t": {
+        "value": "560",
+        "unit": "s"
+      },
+      "p": {
+        "value": "1.001728268e-06",
+        "unit": "cal/s"
+      },
+      "flag": "local_patch"
+    }
+  ],
+  "time_reference": "t=0 at acquisition start"
+}

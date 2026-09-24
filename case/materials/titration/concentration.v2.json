@@ -1,0 +1,17 @@
+{
+  "schema": "itc-material/concentration/1.0",
+  "syringe": {
+    "species": "ligand L",
+    "concentration": {
+      "value": "0.32",
+      "unit": "mM"
+    }
+  },
+  "cell": {
+    "species": "protein M",
+    "concentration": {
+      "value": 20.0,
+      "unit": "µM"
+    }
+  }
+}

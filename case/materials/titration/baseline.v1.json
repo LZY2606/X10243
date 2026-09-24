@@ -1,0 +1,12 @@
+{
+  "schema": "itc-material/baseline/1.0",
+  "baseline": {
+    "method": "constant",
+    "level": {
+      "value": "1.000e-06",
+      "unit": "cal/s"
+    },
+    "slope": null,
+    "time_reference": "t=0 at acquisition start"
+  }
+}

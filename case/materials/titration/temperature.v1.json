@@ -1,0 +1,8 @@
+{
+  "schema": "itc-material/temperature/1.0",
+  "temperature": {
+    "value": 25.0,
+    "unit": "°C"
+  },
+  "note": "jacket temperature"
+}

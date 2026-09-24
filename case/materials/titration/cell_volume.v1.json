@@ -1,0 +1,8 @@
+{
+  "schema": "itc-material/cell_volume/1.0",
+  "cell_volume": {
+    "value": 0.2034,
+    "unit": "mL"
+  },
+  "note": "active cell volume"
+}

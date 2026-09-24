@@ -1,0 +1,8 @@
+{
+  "schema": "itc-material/temperature/1.0",
+  "temperature": {
+    "value": "warm-ish",
+    "unit": "°C"
+  },
+  "note": "故意无法转换：导入时留在原位置并附诊断"
+}
